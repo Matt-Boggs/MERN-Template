@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Books from "./pages/Books";
+import Mocks from "./pages/Mocks";
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
@@ -11,10 +11,10 @@ function App() {
       <div>
         <Nav />
         <Switch>
-          <Route exact path={["/", "/books"]}>
-            <Books />
+          <Route exact path={["/", "/mocks"]}>
+            <Mocks />
           </Route>
-          <Route exact path="/books/:id">
+          <Route exact path="/mocks/:id">
             <Detail />
           </Route>
           <Route>

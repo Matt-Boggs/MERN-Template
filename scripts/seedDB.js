@@ -8,7 +8,7 @@ mongoose.connect(
   "mongodb://localhost/EXAMPLENAME"
 );
 
-const bookSeed = [
+const mockSeed = [
   {
     name: "EXAMPLE 1",
     date: new Date(Date.now())
@@ -32,9 +32,9 @@ const bookSeed = [
   
 ];
 
-db.Book
+db.Mock
   .remove({})
-  .then(() => db.Book.collection.insertMany(bookSeed))
+  .then(() => db.Mock.collection.insertMany(mockSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
